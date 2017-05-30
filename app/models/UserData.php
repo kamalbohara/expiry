@@ -4,30 +4,13 @@
  * Created by PhpStorm.
  * User: kamal
  * Date: 5/30/2017
- * Time: 1:29 PM
+ * Time: 6:07 PM
  */
 namespace app\models;
-class LoginData
+class UserData
 {
-    private $id;
     private $email;
     private $password;
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * @return mixed
@@ -60,5 +43,4 @@ class LoginData
     {
         $this->password = $password;
     }
-
 }

@@ -6,9 +6,7 @@
  * Time: 12:11 PM
  */
 
-namespace app\models\mysql;
-
-use app\models\mysql\MySqliDB;
+namespace app\models;
 
 class MySqliQuery extends MySqliDB
 {

@@ -6,7 +6,7 @@
  * Time: 12:24 PM
  */
 
-namespace app\models\query;
+namespace app\models;
 interface QueryBuilderInterface
 {
     public function select();

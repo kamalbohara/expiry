@@ -6,7 +6,7 @@
  * Time: 1:26 PM
  */
 require_once '../config/define.inc.php';
-use app\models\login\Login;
+use app\models\Login;
 
 if ( isset($_POST['submit']) ) {
     $email = $_POST['email'];

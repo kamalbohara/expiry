@@ -6,7 +6,7 @@
  * Date: 5/30/2017
  * Time: 1:13 PM
  */
-namespace app\models\querydata;
+namespace app\models;
 class QueryData
 {
     public $tabelName;

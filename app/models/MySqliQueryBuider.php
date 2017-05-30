@@ -6,12 +6,10 @@
  * Time: 12:26 PM
  */
 
-namespace app\models\mysqlQuery;
+namespace app\models;
 
-use app\config\dbconstant\DBConstants;
-use app\helpers\queryhelper\QueryBuilderHelper;
-use app\models\query\QueryBuilderInterface;
-use app\models\querydata\QueryData;
+use app\config\DBConstants;
+use app\helpers\QueryBuilderHelper;
 
 class MySqliQueryBuider extends QueryData implements QueryBuilderInterface
 {

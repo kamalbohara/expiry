@@ -6,7 +6,7 @@
  * Time: 12:39 PM
  */
 
-namespace app\config\constant;
+namespace app\config;
 class Constants
 {
     const COMMA=",";

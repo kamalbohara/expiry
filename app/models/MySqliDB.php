@@ -7,10 +7,8 @@
  * Time: 10:42 AM
  */
 
-namespace app\models\mysql;
-
-use app\models\db\DatabaseInterface;
-use app\config\dbconstant\DBConstants;
+namespace app\models;
+use app\config\DBConstants;
 
 abstract class MySqliDB implements DatabaseInterface
 {
@@ -25,9 +23,9 @@ abstract class MySqliDB implements DatabaseInterface
     }
 
     public function __destruct()
-    {
-        mysqli_close(self::$conn);
-    }
+{
+    mysqli_close(self::$conn);
+}
 
     abstract public function query();
 

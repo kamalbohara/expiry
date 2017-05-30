@@ -6,10 +6,7 @@
  * Time: 1:23 PM
  */
 
-namespace app\models\login;
-
-use app\models\logindata\LoginData;
-use app\models\queryfactory\QueryFactory;
+namespace app\models;
 
 class Login extends LoginData
 {
@@ -27,7 +24,7 @@ class Login extends LoginData
             $this->queryBuidlerObj->setTabelName('users');
             $this->queryBuidlerObj->setFields(array('id','email'));
             $this->queryBuidlerObj->setLimit(1);
-            $this->queryBuidlerObj->setWhere(array('email' => $this->getEmail()));
+            $this->queryBuidlerObj->setWhere(array('email' => $this->getEmail(),'password'=>$this->getPassword()));
 
             $this->queryObj->sqlQuery = $this->queryBuidlerObj->select();
             $this->queryObj->resultSet=$this->queryObj->query();

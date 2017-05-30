@@ -6,11 +6,9 @@
  * Date: 5/30/2017
  * Time: 1:36 PM
  */
-namespace app\models\queryfactory;
-use app\models\mysql\MySqliQuery;
-use app\models\mango;
-use app\config\dbconstant\DBConstants;
-use app\models\mysqlQuery\MySqliQueryBuider;
+namespace app\models;
+use app\config\DBConstants;
+use app\models\MySqliQueryBuider;
 class QueryFactory
 {
     public $queryInstance;

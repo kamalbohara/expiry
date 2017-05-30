@@ -7,9 +7,9 @@
  * Time: 12:35 PM
  */
 
-namespace app\helpers\queryhelper;
+namespace app\helpers;
 
-use app\config\constant\Constants;
+use app\config\Constants;
 
 trait QueryBuilderHelper
 {
@@ -17,7 +17,7 @@ trait QueryBuilderHelper
      * @param array $fields
      * @return string
      */
-    protected function convertFieldsToString(array $fields): string
+    private function convertFieldsToString(array $fields): string
     {
         $fieldVal = '';
         if ( count($fields) > 0 ) {

@@ -7,8 +7,8 @@
  * Time: 10:49 AM
  */
 
-namespace app\config\dbconstant;
-use app\config\constant\Constants;
+namespace app\config;
+use app\config\Constants;
 
 class DBConstants extends Constants
 {

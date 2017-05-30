@@ -6,7 +6,7 @@
  * Date: 5/30/2017
  * Time: 10:52 AM
  */
-namespace app\models\db;
+namespace app\models;
 interface DatabaseInterface
 {
     public static function connection();

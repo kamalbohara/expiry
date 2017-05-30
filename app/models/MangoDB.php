@@ -6,8 +6,7 @@
  * Date: 5/30/2017
  * Time: 11:54 AM
  */
-namespace app\models\mango;
-use app\models\db\DatabaseInterface;
+namespace app\models;
 
 class MangoDB implements DatabaseInterface
 {

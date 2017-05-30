@@ -1,7 +1,5 @@
 <?php
-require_once '../config/define.inc.php';
-
-
+//require_once '../config/define.inc.php';
 ?>
 <html>
 <head>

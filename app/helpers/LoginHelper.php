@@ -6,9 +6,9 @@
  * Time: 5:11 PM
  */
 
-namespace app\helpers\loginhelper;
+namespace app\helpers;
 
-use app\models\login\Login;
+use app\models\Login;
 
 class LoginHelper
 {
