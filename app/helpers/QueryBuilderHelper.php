@@ -86,4 +86,15 @@ trait QueryBuilderHelper
         }
         return $str;
     }
+
+    private function mySqlInsertValues(array $values):string
+    {
+        $str = '';
+        foreach ($values as $value) {
+            $str .= $this->fieldBindingWithSingleQuote($value) . Constants::COMMA;
+        }
+        $str = substr($str, 0, strlen($str) - 1);
+
+        return $str;
+    }
 }

@@ -5,7 +5,6 @@
  * Date: 28-05-2017
  * Time: 20:11
  */
-namespace config\defines;
-require_once "../../vendor/autoload.php";
 session_start();
+require_once "vendor/autoload.php";
 define("SITE_URL", "http://localhost/expiryscheduler/");

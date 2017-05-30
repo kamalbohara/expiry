@@ -8,6 +8,7 @@
  */
 
 namespace app\models;
+
 use app\config\DBConstants;
 
 abstract class MySqliDB implements DatabaseInterface
@@ -23,9 +24,9 @@ abstract class MySqliDB implements DatabaseInterface
     }
 
     public function __destruct()
-{
-    mysqli_close(self::$conn);
-}
+    {
+        mysqli_close(self::$conn);
+    }
 
     abstract public function query();
 

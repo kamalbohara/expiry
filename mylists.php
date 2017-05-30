@@ -1,7 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kamal
- * Date: 5/30/2017
- * Time: 6:06 PM
- */
+require_once "define.inc.php";
+?>
+<a href="<?php echo SITE_URL; ?>app/controllers/logout.php">Logout</a>

@@ -31,11 +31,11 @@ class MySqliQueryBuider extends QueryData implements QueryBuilderInterface
     public function insert(): string
     {
         $sql = DBConstants::INSERT;
-        $sql .= $this->getTableName();
+        $sql .= $this->getTabelName();
         $sql .= $this->insertFieldNames();
-        $sql .= Constants::VALUES . Constants::OPEN_BRAKET;
+        $sql .= DBConstants::VALUES . DBConstants::OPEN_BRAKET;
         $sql .= $this->insertValues();
-        $sql .= Constants::CLOSE_BRAKET;
+        $sql .= DBConstants::CLOSE_BRAKET;
 
         return $sql;
     }
@@ -43,7 +43,7 @@ class MySqliQueryBuider extends QueryData implements QueryBuilderInterface
     public function update(): string
     {
         $sql = DBConstants::UPDATE;
-        $sql .= $this->getTableName();
+        $sql .= $this->getTabelName();
         $sql .= DBConstants::SET;;
         $sql .= $this->updateFields();
         $sql .= $this->where();
@@ -72,8 +72,9 @@ class MySqliQueryBuider extends QueryData implements QueryBuilderInterface
 
     private function join(): string
     {
-        return $this->mySqlJoin($this->getJoinTable(),$this->getJoinFields());
+        return $this->mySqlJoin($this->getJoinTable(), $this->getJoinFields());
     }
+
     private function order(): string
     {
         return $this->mySqlOrderBy($this->getOrder());
@@ -84,9 +85,17 @@ class MySqliQueryBuider extends QueryData implements QueryBuilderInterface
         return $this->mySqllimit($this->getLimit());
     }
 
+    private function insertFieldNames(): string
+    {
+        if (!empty($this->getFields())) {
+            return DBConstants::OPEN_BRAKET . $this->convertFieldsToString($this->getFields()) . DBConstants::CLOSE_BRAKET;
+        }
+        return '';
+    }
+
     private function insertValues(): string
     {
-        return $this->convertFieldsToString($this->getValues());
+        return $this->mySqlInsertValues($this->getValues());
     }
 
     private function updateFields(): string

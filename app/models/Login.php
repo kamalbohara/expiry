@@ -14,9 +14,19 @@ class Login extends LoginData
     private $queryFactoryObj;
     private $queryBuidlerObj;
     private $loginData;
+    private $validateObj;
+
+    public function __construct()
+    {
+        $this->validateObj = new Validation();
+    }
+
     public function login(): bool
     {
-        if ( $this->validationCheck() ) {
+        $this->validateObj->setEmail($this->getEmail());
+        $this->validateObj->setPassword($this->getPassword());
+
+        if ( $this->validateObj->validationCheck() ) {
             $this->queryFactoryObj = new QueryFactory();
             $this->queryObj = $this->queryFactoryObj->getQueryObject();
 
@@ -44,8 +54,5 @@ class Login extends LoginData
         }
     }
 
-    private function validationCheck()
-    {
-        return true;
-    }
+
 }

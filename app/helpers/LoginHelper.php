@@ -8,12 +8,27 @@
 
 namespace app\helpers;
 
-use app\models\Login;
+use app\models\LoginData;
 
 class LoginHelper
 {
     public function checkLogin()
     {
+        if ( isset($_SESSION['login']) ) {
+            $userData = unserialize($_SESSION['login']);
+            if ( $userData instanceof LoginData ) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    /**
+     * @return bool
+     */
+    public function logout(): bool
+    {
+        session_destroy();
+        return true;
     }
 }
