@@ -9,7 +9,7 @@
 namespace app\models\mysqlQuery;
 
 use app\config\dbconstant\DBConstants;
-use app\helopers\queryhelper\QueryBuilderHelper;
+use app\helpers\queryhelper\QueryBuilderHelper;
 use app\models\query\QueryBuilderInterface;
 use app\models\querydata\QueryData;
 
